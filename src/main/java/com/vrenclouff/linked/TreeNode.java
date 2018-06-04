@@ -11,29 +11,29 @@ public class TreeNode<T extends Serializable> implements Serializable {
     private final TreeNode<T> parent;
     private final List<TreeNode<T>> children;
 
-    TreeNode(T value, TreeNode<T> parent) {
+    public TreeNode(T value, TreeNode<T> parent) {
         this.value = value;
         this.parent = parent;
         this.children = new LinkedList<>();
     }
 
-    T value() {
+    public T value() {
         return value;
     }
 
-    TreeNode<T> parent() {
+    public TreeNode<T> parent() {
         return parent;
     }
 
-    List<TreeNode<T>> children() {
+    public List<TreeNode<T>> children() {
         return children;
     }
 
-    boolean isLeaf() {
+    public boolean isLeaf() {
         return children().isEmpty();
     }
 
-    boolean isRoot() {
+    public boolean isRoot() {
         return parent == null;
     }
 }
