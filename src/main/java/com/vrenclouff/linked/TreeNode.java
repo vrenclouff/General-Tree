@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 
-class TreeNode<T extends Serializable> implements Serializable {
+public class TreeNode<T extends Serializable> implements Serializable {
 
     private final T value;
     private final TreeNode<T> parent;
